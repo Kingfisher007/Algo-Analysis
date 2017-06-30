@@ -46,26 +46,28 @@ int ConsoleUI::GetOptions()
 
 void ConsoleUI::DisplayResult(Result result)
 {
-	std::cout << "************************************** Result ***************************************" << std::endl;
+	std::cout << endl;
+	std::cout << "****************************** Result *****************************" << std::endl;
 	std::cout << " Algorithm : " << result.Name << std::endl;
 	std::cout << " Size : " << result.SampleSize << std::endl;
-	std::cout << "--------------------------------------------------------------------------------------" << std::endl;
+	std::cout << "--------------------------------------------------------------------" << std::endl;
 	std::cout << "| Input Type           |" << " Assignments   |" << " Comparisons    |" << " Swaps    |" << std::endl;
-	std::cout << "--------------------------------------------------------------------------------------" << std::endl;
+	std::cout << "--------------------------------------------------------------------" << std::endl;
 	ExecutionStat stat;
 	for (int counter = 0; counter < 4; counter++)
 	{
 		stat = result.Stats[counter];
 		std::cout << "|";
-		std::cout << std::setw(20) << std::left << GetSampleName(stat.Type) << " |";
-		std::cout << std::setw(15) << std::right << stat.Assignments << " |";
-		std::cout << std::setw(15) << std::right << stat.Comparison << " |";
-		std::cout << std::setw(8) << std::right << stat.Swaps << " |";
+		std::cout << std::setw(21) << std::left << GetSampleName(stat.Type) << " |";
+		std::cout << std::setw(14) << std::right << stat.Assignments << " |";
+		std::cout << std::setw(14) << std::right << stat.Comparison << " |";
+		std::cout << std::setw(10) << std::right << stat.Swaps << " |";
 		std::cout << std::endl;
 	};
-	std::cout << "--------------------------------------------------------------------------------------" << std::endl;
+	std::cout << "--------------------------------------------------------------------" << std::endl;
 	std::cout << " Press any key to continue..." << std::endl;
 	std::cin;
+	std::cout << endl;
 };
 
 std::string ConsoleUI::GetSampleName(SampleType type)

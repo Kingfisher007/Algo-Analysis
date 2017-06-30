@@ -9,7 +9,7 @@ using namespace std;
 class BubbleSort
 {
 public:
-	void bubbleSortInPlace1(Object obj[], int size);
-	void bubbleSortInPlace2(Object obj[], int size);
+	static void bubbleSortInPlace1(Object obj[], int size);
+	static void bubbleSortInPlace2(Object obj[], int size);
 };
 

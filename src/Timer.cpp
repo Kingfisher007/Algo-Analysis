@@ -5,7 +5,7 @@
 #include <string>
 #include <sstream>
 #include <iostream>
-#include "Timer.h";
+#include "Timer.h"
 
 using namespace std;
 using HRClock = std::chrono::high_resolution_clock;

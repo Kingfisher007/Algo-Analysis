@@ -9,6 +9,6 @@ using namespace std;
 class SelectionSort
 {
 public:
-	void SelectionSortInPlace(Object obj[], int size);
+	static void SelectionSortInPlace(Object obj[], int size);
 };
 

@@ -20,13 +20,10 @@ void GenerateReverseSortedData(Object obj[], int size);
 void GenerateAlmostSortedData(Object obj[], int size);
 void GenerateRandomData(Object obj[], int size);
 
-static void Main(char* args)
+int main()
 {
 	int option = 0;
 	int size = 0;
-	BubbleSort bs;
-	SelectionSort ss;
-	InsertionSort as;
 
 	ConsoleUI::DisplayHeader();
 	
@@ -38,15 +35,15 @@ static void Main(char* args)
 		switch (option)
 		{
 			case 1:
-				Execute(bs.bubbleSortInPlace1, "Bubble sort");
+				Execute(&(BubbleSort::bubbleSortInPlace1), "Bubble sort");
 				break;
 			
 			case 2:
-				Execute(ss.SelectionSortInPlace, "Selection sort");
+				Execute(&(SelectionSort::SelectionSortInPlace), "Selection sort");
 				break;
 			
 			case 3:
-				Execute(as.InsertionSortInPlace, "Insertion sort");
+				Execute(&(InsertionSort::InsertionSortInPlace), "Insertion sort");
 				break;
 
 			default:
@@ -55,6 +52,8 @@ static void Main(char* args)
 	} while (option != 9);
 
 	cout << "Good bye!";
+
+	return 0;
 };
 
 void Execute(sortFun fun, std::string name)
@@ -76,7 +75,7 @@ void Execute(sortFun fun, std::string name)
 
 	ConsoleUI::DisplayResult(result);
 
-	delete(data);
+	//delete(data);
 };
 
 ExecutionStat Run(SampleType type, sortFun fun, Object data[], int size, SingletonCounters SCounter)
@@ -136,7 +135,7 @@ void GenerateAlmostSortedData(Object obj[], int size)
 		obj[counter] = counter;
 	};
 	int temp;
-	for (int counter = 5; counter < size; counter+5)
+	for (int counter = 5; counter < size; counter+=5)
 	{
 		temp = obj[counter];
 		obj[counter] = obj[counter - 1];

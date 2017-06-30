@@ -7,7 +7,7 @@
 
 using namespace std;
 
-CSVWriter::CSVWriter(std::string filename, bool newFile = false)
+CSVWriter::CSVWriter(std::string filename, bool newFile )
 {
 	int mode = ios::app;
 	if (newFile)

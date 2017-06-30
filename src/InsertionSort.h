@@ -9,6 +9,6 @@ using namespace std;
 class InsertionSort
 {
 public:
-	void InsertionSortInPlace(Object obj[], int size);
+	static void InsertionSortInPlace(Object obj[], int size);
 };
 

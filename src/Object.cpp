@@ -1,7 +1,7 @@
 #include "SingletonCounters.h"
 #include "Object.h"
 
-	Object::Object(int n = 0)
+	Object::Object(int n)
 		:m_val(n)
 	{
 		m_SCounter = SingletonCounters::get();
