@@ -11,34 +11,35 @@
 		:m_val(rhs.m_val)
 	{
 		//Update the counter
-		m_SCounter.incrementAssignments();
+		m_SCounter = SingletonCounters::get();
+		m_SCounter->incrementAssignments();
 	}
 
 	const Object& Object::operator=(const Object& rhs)
 	{
 		m_val = rhs.m_val;
 		//Update the counter
-		m_SCounter.incrementAssignments();
+		m_SCounter->incrementAssignments();
 		return *this;
 	}
 
 	bool Object::operator>(const Object& rhs)
 	{
 		//Update the counter
-		m_SCounter.incrementComparisons();
+		m_SCounter->incrementComparisons();
 		return m_val > rhs.m_val;
 	}
 
 	bool Object::operator<(const Object& rhs)
 	{
 		//Update the counter
-		m_SCounter.incrementComparisons();
+		m_SCounter->incrementComparisons();
 		return m_val < rhs.m_val;
 	}
 
 	void Object::swap(Object& rhs)
 	{
-		m_SCounter.incrementSwaps();
+		m_SCounter->incrementSwaps();
 		Object temp(rhs);
 		rhs = (*this);
 		*this = temp;

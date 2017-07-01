@@ -16,5 +16,5 @@ public:
 
 private:
 	int m_val;
-	SingletonCounters m_SCounter;
+	SingletonCounters* m_SCounter = SingletonCounters::get();
 };

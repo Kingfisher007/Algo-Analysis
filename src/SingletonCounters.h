@@ -13,11 +13,13 @@ public:
 	int getComparisons();
 	int getSwaps();
 	int getAssignments();
-	static SingletonCounters& get();
+	static SingletonCounters* get();
 
 private:
+	int id;
 	int m_comparisons;
 	int m_swaps;
 	int m_assignments;
 
+	SingletonCounters(int myid);
 };

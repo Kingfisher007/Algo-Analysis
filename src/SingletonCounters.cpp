@@ -4,9 +4,14 @@
 
 using namespace std;
 
-SingletonCounters& SingletonCounters::get()
+SingletonCounters::SingletonCounters(int myid)
 {
-	static SingletonCounters ctr;
+	id = myid;
+};
+
+SingletonCounters* SingletonCounters::get()
+{
+	static SingletonCounters* ctr = new SingletonCounters(rand() + 1);
 	return ctr;
 }
 

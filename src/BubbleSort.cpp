@@ -6,9 +6,7 @@
 using namespace std;
 
 void BubbleSort::bubbleSortInPlace1(Object obj[], int size)
-{
-	cout << endl << "bubbleSortInPlace1:";
-	
+{	
 	for (int i = 0; i < size; i++)
 	{
 		bool nothingSwappedInLastIteration = true;
@@ -26,9 +24,7 @@ void BubbleSort::bubbleSortInPlace1(Object obj[], int size)
 }
 
 void BubbleSort::bubbleSortInPlace2(Object obj[], int size)
-{
-	cout << endl << "bubbleSortInPlace2:";
-	
+{	
 	int newSize = size;
 	while (newSize > 0)
 	{

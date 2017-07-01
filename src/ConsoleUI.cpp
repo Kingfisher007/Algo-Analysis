@@ -37,7 +37,7 @@ int ConsoleUI::GetOptions()
 	int size = 0;
 	do
 	{
-		cout << "please provide data size : ";
+		cout << "Please provide data size : ";
 		cin >> size;
 	} while (size <= 0);
 
@@ -51,7 +51,7 @@ void ConsoleUI::DisplayResult(Result result)
 	std::cout << " Algorithm : " << result.Name << std::endl;
 	std::cout << " Size : " << result.SampleSize << std::endl;
 	std::cout << "--------------------------------------------------------------------" << std::endl;
-	std::cout << "| Input Type           |" << " Assignments   |" << " Comparisons    |" << " Swaps    |" << std::endl;
+	std::cout << "| Input Type           |" << " Assignments   |" << " Comparisons   |" << " Swaps     |" << std::endl;
 	std::cout << "--------------------------------------------------------------------" << std::endl;
 	ExecutionStat stat;
 	for (int counter = 0; counter < 4; counter++)
