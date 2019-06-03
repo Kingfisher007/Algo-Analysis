@@ -1,5 +1,5 @@
 # Algo-Analysis
-This is a sample project to analyse different operations performed while execting an algorithm.
+This is a sample project to analyse different operations performed while execting an algorithm with disperate datasets.
 
 ![HomeScreen](/images/homescreen.jpg)
 
